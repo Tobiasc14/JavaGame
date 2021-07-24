@@ -135,13 +135,7 @@ public class Handler {
 
 			}
 		}
-		if (this.countEnemies() == 0){
-			enemies = false;
-		}
-		else {
-			enemies = true;
-		}
-
+		this.countEnemies();
 
 
 	}

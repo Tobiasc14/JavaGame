@@ -26,11 +26,11 @@ public class Game extends Canvas implements Runnable{
 		
 		
 		handler = new Handler();
-		
-		this.addKeyListener(new KeyInput(handler, hud, level));
-		this.addMouseListener(new MouseInput(handler));
 		hud = new HUD(handler, level);
 		level = new Level(handler, hud);
+		this.addKeyListener(new KeyInput(handler, hud, level));
+		this.addMouseListener(new MouseInput(handler));
+		
 		
 		new Window(WIDTH, HEIGHT, "game",this);
 		
