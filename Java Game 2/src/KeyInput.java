@@ -72,7 +72,8 @@ public class KeyInput extends KeyAdapter{
 		if(!handler.enemies && key == KeyEvent.VK_N) {
 			System.out.println("Button Press Registered");
 			level.ready();
-			handler.enemies = true;
+			level.level++;
+			//handler.enemies = true;
 			//hud.tick();
 			//handler.tick();
 			

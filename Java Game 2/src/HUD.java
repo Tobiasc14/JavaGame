@@ -51,10 +51,12 @@ public class HUD {
 		g.fillRect(10, 10, health, 20);
 		g.setColor(Color.white);
 		g.drawRect(10, 10, 200, 20);
-		if(handler.alive){
+		
+		if(handler.alive || health>=0){
 			g.setColor(Color.GRAY);
 			g.setFont(new Font("Verdana", Font.BOLD, 18));
 			g.drawString("Score:" + score, 220, 30);
+			
 			
 		}
 		

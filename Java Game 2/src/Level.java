@@ -32,9 +32,10 @@ public class Level {
 	}
 	public void tick(){
 		//this section needs a lot of work
+		System.out.println("Level " + level);
 		int enemies = handler.countEnemies();
 		if (enemies <= 0) {
-			level++;
+			
 			handler.removeAllObjects();
 			hasRendered = false;
 		}
@@ -55,7 +56,7 @@ public class Level {
 			handler.addObject(new BasicEnemy(Game.WIDTH/2, Game.HEIGHT/2, ID.BasicEnemy, Game.WIDTH, Game.HEIGHT, 100));
 			hasRendered = true;
 			isReady = false;
-			handler.enemies = true;
+			handler.countEnemies();
 			
 		}
 		
