@@ -21,7 +21,7 @@ public class HUD {
 	
 	public void tick(){
 		
-		if(handler.isAlive()){
+		if(handler.isAlive() && handler.enemies){
 			GameObject player = handler.object.get(handler.findPlayer());
 			GameObject tempObject = handler.object.get(0);
 			for(int i = 0; i<handler.object.size();i++){
@@ -59,12 +59,21 @@ public class HUD {
 		if(!handler.alive){
 			curTime = System.currentTimeMillis();
 			handler.scoreBonus=0;
-			g.setColor(Color.green);
+			g.setColor(Color.red);
 			Font font1 = new Font("Verdana", Font.BOLD, 34);
 			g.setFont(font1);
 			g.drawString("You Died!", Game.WIDTH/2,Game.HEIGHT/2);			
 			g.setFont(new Font("Verdana", Font.BOLD, 12));
 			g.drawString("press R to respawn", Game.WIDTH/2,Game.HEIGHT/2+30);
+		}
+		if(!handler.enemies) {
+			curTime = System.currentTimeMillis();
+			g.setColor(Color.red);
+			Font font1 = new Font("Verdana", Font.BOLD, 34);
+			g.setFont(font1);
+			g.drawString("You Won!", Game.WIDTH/2,Game.HEIGHT/2);	
+			g.setFont(new Font("Verdana", Font.BOLD, 12));
+			g.drawString("Press 'n' for Next Level", Game.WIDTH/2,Game.HEIGHT/2+30);
 		}
 	}
 

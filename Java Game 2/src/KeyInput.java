@@ -8,6 +8,7 @@ public class KeyInput extends KeyAdapter{
 	
 	private Handler handler;
 	private HUD hud;
+	private Level level;
 	private boolean uP = false;
 	private boolean dP = false;
 	private boolean lP = false;
@@ -17,9 +18,10 @@ public class KeyInput extends KeyAdapter{
 	private int time;
 	private int curTime;
 
-	public KeyInput(Handler handler, HUD hud){
+	public KeyInput(Handler handler, HUD hud, Level level){
 		this.handler=handler;
 		this.hud = hud;
+		this.level = level;
 		
 	}
 	
@@ -63,6 +65,10 @@ public class KeyInput extends KeyAdapter{
 				handler.addObject(new Player(0, 0, ID.Player, Game.WIDTH, Game.HEIGHT));
 
 
+			}
+			if(!handler.enemies && key == KeyEvent.VK_N) {
+				level.ready();
+				
 			}
 
 		}

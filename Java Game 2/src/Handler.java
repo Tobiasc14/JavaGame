@@ -7,6 +7,7 @@ public class Handler {
 	//creates list of game objects called object
 	LinkedList<GameObject> object = new LinkedList<GameObject>();
 	boolean alive = true;
+	boolean enemies = true;
 	int scoreBonus = 0;
 
 	public boolean isAlive(){
@@ -134,6 +135,12 @@ public class Handler {
 
 			}
 		}
+		if (this.countEnemies() == 0){
+			enemies = false;
+		}
+		else {
+			enemies = true;
+		}
 
 
 
@@ -155,5 +162,27 @@ public class Handler {
 
 	public void removeObject(GameObject object){
 		this.object.remove(object);
+	}
+	public void removeAllObjects() {
+		for (int i = 0; i < this.object.size(); i++) {
+			GameObject tempObject = object.get(i);
+			this.object.remove(tempObject);
+		}
+	}
+	public int countEnemies() {
+		int numEnemies = 0;
+		for(int i =0; i < this.object.size(); i++) {
+			GameObject tempObject = object.get(i);
+			if (tempObject.getID().equals(ID.BasicEnemy)){
+				numEnemies++;
+			}
+		}
+		if (numEnemies == 0){
+			enemies = false;
+		}
+		else {
+			enemies = true;
+		}
+		return numEnemies;
 	}
 }

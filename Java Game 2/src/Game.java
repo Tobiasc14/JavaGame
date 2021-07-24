@@ -27,7 +27,7 @@ public class Game extends Canvas implements Runnable{
 		
 		handler = new Handler();
 		
-		this.addKeyListener(new KeyInput(handler, hud));
+		this.addKeyListener(new KeyInput(handler, hud, level));
 		this.addMouseListener(new MouseInput(handler));
 		hud = new HUD(handler);
 		level = new Level(handler, hud);
@@ -121,8 +121,9 @@ public class Game extends Canvas implements Runnable{
 	 
 	 private void tick(){
 		 handler.tick();
-		 hud.tick();
 		 level.tick();
+		 hud.tick();
+		 
 	 }
 	 
 	 private void render(){
