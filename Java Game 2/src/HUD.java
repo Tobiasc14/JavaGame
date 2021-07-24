@@ -6,13 +6,15 @@ public class HUD {
 	
 	int health = 200;
 	private Handler handler;
+	private Level level;
 	long curTime = System.currentTimeMillis();
 	int score = 0;
 	
 	
 	
-	public HUD(Handler handler){
+	public HUD(Handler handler, Level level){
 		this.handler = handler;
+		this.level = level;
 		
 	}
 	public void restoreHealth(){

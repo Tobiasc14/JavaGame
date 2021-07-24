@@ -29,7 +29,7 @@ public class Game extends Canvas implements Runnable{
 		
 		this.addKeyListener(new KeyInput(handler, hud, level));
 		this.addMouseListener(new MouseInput(handler));
-		hud = new HUD(handler);
+		hud = new HUD(handler, level);
 		level = new Level(handler, hud);
 		
 		new Window(WIDTH, HEIGHT, "game",this);
