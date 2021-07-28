@@ -63,7 +63,7 @@ public class KeyInput extends KeyAdapter{
 
 
 				handler.addObject(new Player(0, 0, ID.Player, Game.WIDTH, Game.HEIGHT));
-
+				
 
 			}
 			
