@@ -43,6 +43,7 @@ public class Level {
 
 			handler.removeAllObjects();
 			hasRendered = false;
+			hud.levelName++;
 			
 			
 			

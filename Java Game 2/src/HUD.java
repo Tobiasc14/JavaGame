@@ -1,6 +1,7 @@
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
+import java.util.Objects;
 
 public class HUD {
 	
@@ -9,6 +10,7 @@ public class HUD {
 	private Level level;
 	long curTime = System.currentTimeMillis();
 	int score = 0;
+	int levelName;
 	
 	
 	
@@ -39,6 +41,12 @@ public class HUD {
 			}
 			score = handler.scoreBonus;
 		}
+		if (Objects.isNull(level)) {
+			levelName = 1;
+		}
+		else {
+			levelName = level.level + 1;
+		}
 		
 		
 		Game.clamp(health, 0, 200);
@@ -56,6 +64,8 @@ public class HUD {
 			g.setColor(Color.GRAY);
 			g.setFont(new Font("Verdana", Font.BOLD, 18));
 			g.drawString("Score:" + score, 220, 30);
+			
+			//g.drawString("Level:" + levelName, Game.WIDTH - 100, 30);
 			
 			
 		}
