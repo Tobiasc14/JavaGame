@@ -158,17 +158,26 @@ public class Handler {
 		this.object.remove(object);
 	}
 	public void removeAllObjects() {
+		while (this.object.size() > 0) {
+			GameObject tempObject = object.get(0);
+			removeObject(tempObject);
+		}
+		/**
 		for (int i = 0; i < this.object.size(); i++) {
 			GameObject tempObject = object.get(i);
-			this.object.remove(tempObject);
+			removeObject(tempObject);
 		}
+		**/
 	}
 	public int countEnemies() {
 		int numEnemies = 0;
-		for(int i =0; i < this.object.size(); i++) {
+		for(int i = 0; i < this.object.size(); i++) {
 			GameObject tempObject = object.get(i);
 			if (tempObject.getID().equals(ID.BasicEnemy)){
 				numEnemies++;
+			}
+			else {
+				
 			}
 		}
 		if (numEnemies == 0){

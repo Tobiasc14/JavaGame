@@ -78,6 +78,13 @@ public class KeyInput extends KeyAdapter{
 			//handler.tick();
 			
 		}
+		if (!handler.isAlive() && handler.enemies && key == KeyEvent.VK_S) {
+			level.level = 0;
+			level.ready();
+			level.restart = true;
+			handler.tick();
+			handler.setLifeStatus(true);
+		}
 
 
 		//System.out.println(key);
