@@ -68,7 +68,8 @@ public class HUD {
 			g.setFont(font1);
 			g.drawString("You Died!", Game.WIDTH/2,Game.HEIGHT/2);			
 			g.setFont(new Font("Verdana", Font.BOLD, 12));
-			g.drawString("press R to respawn", Game.WIDTH/2,Game.HEIGHT/2+30);
+			g.drawString("press R to Respawn", Game.WIDTH/2,Game.HEIGHT/2+30);
+			g.drawString("press T to Start Over", Game.WIDTH/2,Game.HEIGHT/2+45);
 		}
 		if(!handler.enemies) {
 			curTime = System.currentTimeMillis();
@@ -77,7 +78,7 @@ public class HUD {
 			g.setFont(font1);
 			g.drawString("You Won!", Game.WIDTH/2,Game.HEIGHT/2);	
 			g.setFont(new Font("Verdana", Font.BOLD, 12));
-			g.drawString("Press 'n' for Next Level", Game.WIDTH/2,Game.HEIGHT/2+30);
+			g.drawString("Press 'N' for Next Level", Game.WIDTH/2,Game.HEIGHT/2+30);
 		}
 	}
 

@@ -78,7 +78,7 @@ public class KeyInput extends KeyAdapter{
 			//handler.tick();
 			
 		}
-		if (!handler.isAlive() && handler.enemies && key == KeyEvent.VK_S) {
+		if (!handler.isAlive() && handler.enemies && key == KeyEvent.VK_T) {
 			level.level = 0;
 			level.ready();
 			level.restart = true;
