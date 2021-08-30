@@ -9,7 +9,7 @@ public class Barrier extends GameObject{
 
 	public Barrier(int x, int y, ID id, int gameWidth, int gameHeight) {
 		super((int)(Math.random()*gameWidth), (int)(Math.random()*gameHeight), id, gameWidth, gameHeight);
-		width = (int) (60+Math.random()*50);
+		width = (int) (60+Math.random()*175);
 		height = 40;
 		
 		
@@ -18,7 +18,7 @@ public class Barrier extends GameObject{
 
 	@Override
 	public void tick() {
-		x = this.x;
+		this.setX(x);
 		this.setY(y);
 		
 	}

@@ -142,6 +142,38 @@ public class Level {
 			handler.countEnemies();
 
 		}
+		if (level == 4 && !hasRendered && isReady) {
+
+			handler.addObject(new Player(0, 0, ID.Player, Game.WIDTH, Game.HEIGHT));
+
+
+			handler.addObject(new Barrier(0,0, ID.Barrier, Game.WIDTH, Game.HEIGHT));
+			handler.addObject(new Barrier(0,0, ID.Barrier, Game.WIDTH, Game.HEIGHT));
+			handler.addObject(new Barrier(0,0, ID.Barrier, Game.WIDTH, Game.HEIGHT));
+			handler.addObject(new Barrier(0,0, ID.Barrier, Game.WIDTH, Game.HEIGHT));
+			handler.addObject(new Barrier(0,0, ID.Barrier, Game.WIDTH, Game.HEIGHT));
+			handler.addObject(new Barrier(0,0, ID.Barrier, Game.WIDTH, Game.HEIGHT));
+			handler.addObject(new Barrier(0,0, ID.Barrier, Game.WIDTH, Game.HEIGHT));
+
+			handler.addObject(new BasicEnemy(Game.WIDTH/2, Game.HEIGHT/2, ID.BasicEnemy, Game.WIDTH, Game.HEIGHT, 100));
+			handler.addObject(new BasicEnemy(Game.WIDTH/2, Game.HEIGHT/2, ID.BasicEnemy, Game.WIDTH, Game.HEIGHT, 100));
+			handler.addObject(new BasicEnemy(Game.WIDTH/2, Game.HEIGHT/2, ID.BasicEnemy, Game.WIDTH, Game.HEIGHT, 100));
+			handler.addObject(new BasicEnemy(Game.WIDTH/2, Game.HEIGHT/2, ID.BasicEnemy, Game.WIDTH, Game.HEIGHT, 100));
+			handler.addObject(new BasicEnemy(Game.WIDTH/2, Game.HEIGHT/2, ID.BasicEnemy, Game.WIDTH, Game.HEIGHT, 100));
+			handler.addObject(new BasicEnemy(Game.WIDTH/2, Game.HEIGHT/2, ID.BasicEnemy, Game.WIDTH, Game.HEIGHT, 100));
+			handler.addObject(new BasicEnemy(Game.WIDTH/2, Game.HEIGHT/2, ID.BasicEnemy, Game.WIDTH, Game.HEIGHT, 100));
+			handler.addObject(new BasicEnemy(Game.WIDTH/2, Game.HEIGHT/2, ID.BasicEnemy, Game.WIDTH, Game.HEIGHT, 100));
+			handler.addObject(new BasicEnemy(Game.WIDTH/2, Game.HEIGHT/2, ID.BasicEnemy, Game.WIDTH, Game.HEIGHT, 100));
+			handler.addObject(new BasicEnemy(Game.WIDTH/2, Game.HEIGHT/2, ID.BasicEnemy, Game.WIDTH, Game.HEIGHT, 100));
+			handler.addObject(new BasicEnemy(Game.WIDTH/2, Game.HEIGHT/2, ID.BasicEnemy, Game.WIDTH, Game.HEIGHT, 100));
+			handler.addObject(new BasicEnemy(Game.WIDTH/2, Game.HEIGHT/2, ID.BasicEnemy, Game.WIDTH, Game.HEIGHT, 100));
+
+			hasRendered = true;
+			isReady = false;
+			handler.countEnemies();
+			
+		}
+
 
 
 	}
