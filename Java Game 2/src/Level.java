@@ -35,8 +35,9 @@ public class Level {
 
 	}
 	public void tick(){
-		//this section needs a lot of work, but less than before I implemented any of it
+		//need to update barrier spawning in game
 		//System.out.println("Level " + level);
+		 
 		
 		int enemies = handler.countEnemies();
 		if (enemies <= 0) {

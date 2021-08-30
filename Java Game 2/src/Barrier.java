@@ -18,6 +18,7 @@ public class Barrier extends GameObject{
 
 	@Override
 	public void tick() {
+		//These aren't necessary
 		this.setX(x);
 		this.setY(y);
 		
