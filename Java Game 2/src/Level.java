@@ -174,7 +174,9 @@ public class Level {
 			handler.countEnemies();
 			
 		}
-
+		if (level == 4 && !hasRendered && isReady) {
+			
+		}
 
 
 	}

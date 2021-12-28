@@ -65,7 +65,7 @@ public class HUD {
 			g.setFont(new Font("Verdana", Font.BOLD, 18));
 			g.drawString("Score:" + score, 220, 30);
 			
-			//g.drawString("Level:" + levelName, Game.WIDTH - 100, 30);
+			g.drawString("Level:" + levelName, Game.WIDTH - 100, 30);
 			
 			
 		}
